@@ -1,0 +1,168 @@
+body {
+  background-color: #f8f9fa;
+}
+/* inicio bloqueado html*/
+.bloqueado-html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.message {
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.message h1 {
+  color: #dc3545;
+}
+/* fim bloqueado html*/
+.container {
+  margin-top: 60px;
+  max-width: 1500px;
+}
+.container-sobre,
+.container-contato {
+  padding-top: 60px;
+  max-width: 1450px;
+  margin: auto;
+}
+.form-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.container-contato {
+  padding: 50px 15px;
+  background-color: #f8f9fa;
+}
+#form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+.social-icons a {
+  text-decoration: none;
+  /* Remove qualquer sublinhado do link */
+  display: inline-block;
+  /* Garante que o espaço ao redor do ícone seja apenas do tamanho do ícone */
+  margin: 0 1px;
+  /* Adiciona espaço entre os ícones */
+}
+.social-icons a img {
+  vertical-align: middle;
+  /* Centraliza a imagem em relação ao texto */
+  border: none;
+  /* Remove bordas ao redor da imagem */
+}
+.social-icons a img {
+  transition: transform 0.3s;
+}
+.social-icons a img:hover {
+  transform: scale(1.1);
+}
+.linha {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+  /* Define uma linha na parte inferior */
+  padding-bottom: 16px;
+  /* Espaço entre o texto e a linha */
+}
+#searchInput {
+  width: 387px;
+}
+#btnSalvar,
+#btnCancelar {
+  /* Aumenta a largura dos botões */
+  height: 40px;
+  margin-top: 31px;
+}
+#btnCancelar {
+  height: auto;
+  margin-right: 60rem;
+}
+#btnSalvar {
+  margin-left: 2px;
+}
+.table-container {
+  margin-top: 20px;
+}
+.table .thead-dark a th {
+  color: #000;
+  /*background-color: #a0becb;
+      border-color: #a0becb;*/
+}
+.text-center {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+/* botões editar, excluir */
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+.NaBar {
+  height: 100px;
+  background-color: #000;
+}
+.nav-item {
+  margin-top: -55px;
+}
+.logo {
+  width: 100px;
+  margin-top: -77px;
+}
+/* Ajustes para dispositivos móveis */
+@media (max-width: 1920px) {
+  .form-container,
+  .table-container {
+    padding: 15px;
+  }
+  .form-row .form-group {
+    margin-bottom: 15px;
+  }
+  #btnCancelar {
+    height: auto;
+    margin-left: 16px;
+  }
+}
+/* Ajuste da largura da tabela para dispositivos móveis */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* Define o contêiner da tabela com rolagem vertical */
+.table-container {
+  max-height: 400px;
+  /* Define a altura máxima da tabela */
+  overflow-y: auto;
+  /* Habilita o scroll vertical */
+  border: 1px solid #ccc;
+  /* Adiciona uma borda ao contêiner */
+  margin-top: 10px;
+  /* Espaçamento superior */
+}
+.container-footer {
+  background-color: #000;
+  height: 60px;
+  color: #fff;
+  text-align: center;
+  padding-top: 18px;
+  margin-top: 10%;
+  margin-bottom: auto;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cadastro de Veículos</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="/css/style.css">
+   <link rel="icon" href="/imagem/favicon.png" type="icone">
+</head>
+<body>
+    <!--Navbar-->
+    <header class="NaBar py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="branding">
+                <img class="logo" src="/imagem/logo.png" alt="Logo" />
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./contato.html">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div class="container">
+   <div class="form-container">
+       <h2 class="text-center">Autorização de Veículos</h2>
+       <form id="vehicleForm">
+           <div class="form-row">
+               <div class="form-group col-md-4">
+                   <label for="vehicleType">Tipo de Veículo</label>
+                   <input type="text" class="form-control" id="vehicleType" placeholder="Carro/Moto" required>
+               </div>
+               <div class="form-group col-md-4">
+                   <label for="plate">Placa</label>
+                   <input type="text" class="form-control" id="plate" placeholder="ABC-1234" required>
+               </div>
+               <div class="form-group col-md-4">
+                   <label for="color">Cor</label>
+                   <input type="text" class="form-control" id="color" placeholder="Vermelho" required>
+               </div>
+           </div>
+           <div class="form-row">
+               <div class="form-group col-md-6">
+                   <label for="owner">Proprietário</label>
+                   <input type="text" class="form-control" id="owner" placeholder="Proprietário" required>
+               </div>
+               <div class="form-group col-md-3">
+                   <label for="apartment">Apartamento</label>
+                   <input type="number" class="form-control" id="apartment" placeholder="101" min="1" max="999" required>
+               </div>
+               <div class="form-group col-md-3">
+                   <label for="block">Bloco</label>
+                   <input type="number" class="form-control" id="block" placeholder="10" min="1" max="99" required>
+               </div>
+           </div>
+           <div class="form-row">
+               <div class="form-group col-md-4">
+                   <label for="parkingSpot">Nº da Vaga</label>
+                   <input type="number" class="form-control" id="parkingSpot" placeholder="0000" min="1" max="9999" required>
+               </div>
+               <div class="form-group col-md-4">
+                   <label for="entryTime">Entrada</label>
+                   <input type="time" class="form-control" id="entryTime" required>
+               </div>
+               <div class="form-group col-md-4">
+                   <label for="entryDate">Data</label>
+                   <input type="date" class="form-control" id="entryDate" required>
+               </div>
+           </div>
+           <div class="form-row">
+               <div class="form-group col-md-4">
+                <label for="parkingDuration">Duração</label>
+                <select class="form-control" id="parkingDuration" required>
+                    <optgroup label="Minutos">
+                        <option value="15">15 minutos</option>
+                        <option value="30">30 minutos</option>
+                        <option value="45">45 minutos</option>
+                    </optgroup>
+                    <optgroup label="Horas">
+                        <option value="60">1 hora</option>
+                        <option value="120">2 horas</option>
+                        <option value="180">3 horas</option>
+                        <option value="240">4 horas</option>
+                        <option value="300">5 horas</option>
+                        <option value="360">6 horas</option>
+                        <option value="420">7 horas</option>
+                        <option value="480">8 horas</option>
+                        <option value="540">9 horas</option>
+                        <option value="600">10 horas</option>
+                        <option value="720">12 horas</option>
+                    </optgroup>
+                </select>
+            </div>
+               <div class="form-group col-md-8 d-flex justify-content-between">
+                   <button type="submit" id="btnSalvar" class="btn btn-dark">Salvar</button>
+                   <button type="button" id="btnCancelar" class="btn btn-danger">Cancelar</button>
+               </div>
+            </div>
+       </form>
+   </div>
+   <div class="table-container table-responsive mt-4">
+       <h3 class="text-center">Veículos Autorizados</h3>
+       <input type="text" id="searchInput" class="form-control mb-2" placeholder="Pesquisar por, veículo, placa, nome. ">
+       <table class="table table-striped">
+           <thead class="thead-dark">
+               <tr>
+                   <th>Veículo</th>
+                   <th>Placa</th>
+                   <th>Cor</th>
+                   <th>Proprietário</th>
+                   <th>Apto</th>
+                   <th>Bloco</th>
+                   <th>Vaga</th>
+                   <th>Entrada</th>
+                   <th>Data</th>
+                   <th>Tempo</th>
+                   <th>Tempo Excedido</th>
+                   <th>Ações</th>
+               </tr>
+           </thead>
+           <tbody id="vehicleTable"></tbody>
+       </table>
+   </div>
+</div>
+
+<!--Rodapé-->
+    <div class="container-footer">
+        <footer>
+            <small>&copy; 2024 PARKING. Todos os direitos reservados.</small>
+        </footer>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html>
+
+
