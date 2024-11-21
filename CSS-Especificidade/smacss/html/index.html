@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Especificidade</title>
+  <link rel="stylesheet" href="./smacss/base.css">
+  <link rel="stylesheet" href="./smacss/layout.css">
+  <link rel="stylesheet" href="./smacss/modules.css">
+  <link rel="stylesheet" href="./smacss/tema-a.css">
+  <link rel="stylesheet" href="./smacss/tema-b.css">
+
+
+</head>
+<body class="tema-b">
+  <div id="header">
+    <div class="container">
+      <h1 class="title">Nome do site</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+    
+  <div class="container">
+    <div class="accordion">
+      <header class="accordion-header">Nome do acordeão</header>
+      <p class="accordion-content">Conteúdo</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="mensagem mensagem-is-error">
+        <h5 class="mensagem-titulo">Atenção!</h5>
+        <p class="mensagem-conteudo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod error enim blanditiis aperiam iure aspernatur ipsum molestias quos rerum ut explicabo corrupti, incidunt sed omnis, debitis tempora facere, provident earum.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(accordion => {
+      accordion.addEventListener('click', function () {
+        const content = this.querySelector('.accordion-content');
+        const isOpen = content.style.display === 'block';
+
+        document.querySelectorAll('.accordion-content').forEach(item => item.style.display = 'none');
+        
+        content.style.display = isOpen ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
