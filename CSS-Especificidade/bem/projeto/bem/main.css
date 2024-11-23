@@ -1,0 +1,16 @@
+.form {
+  margin: 40px;
+}
+.form__control {
+  margin-bottom: 16px;
+  font-family: sans-serif;
+  color: rgb(56, 102, 255);
+}
+.form__submit {
+  cursor: pointer;
+}
+.form__submit--sending {
+  cursor: wait;
+}
+
+/*# sourceMappingURL=main.css.map */
